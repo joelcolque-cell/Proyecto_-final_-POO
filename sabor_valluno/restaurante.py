@@ -17,7 +17,7 @@ class Restaurante:
         self._pedidos = {}
         self._siguiente_numero = 1
 
-    # ---- menu ----
+    # mi  menu 
     def registrar_producto(self, producto: Producto) -> Producto:
         if producto.codigo in self._menu:
             raise ErrorValidacion(f"Ya existe un producto con codigo '{producto.codigo}'")
