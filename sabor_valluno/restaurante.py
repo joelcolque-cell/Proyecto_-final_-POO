@@ -30,7 +30,7 @@ class Restaurante:
         return self._menu[codigo]
 
     def crear_plato(self, codigo, nombre, precio, dias=None) -> Plato:
-        if dias is None:   # los dias restringidos salen de la variante activa
+        if dias is None:   # los dias restringidos 
             dias = variante.actual().dias_platos.get(clave_texto(nombre))
         return self.registrar_producto(Plato(codigo, nombre, precio, dias))
 
