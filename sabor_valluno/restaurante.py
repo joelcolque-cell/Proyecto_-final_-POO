@@ -59,7 +59,7 @@ class Restaurante:
                 l.append("  " + str(p))
         return "\n".join(l)
 
-    # ---- clientes ----
+    # mis clientes 
     def registrar_cliente(self, nombre: str, telefono: str) -> Cliente:
         cliente = Cliente(nombre, telefono)
         if telefono in self._clientes:
@@ -67,7 +67,7 @@ class Restaurante:
         self._clientes[telefono] = cliente
         return cliente
 
-    # ---- pedidos ----
+    # mis pedidos 
     def crear_pedido(self, tipo: str, cliente: Cliente, dia: str, mesa=None, zona=None, registrado_en=None) -> Pedido:
         n = self._siguiente_numero
         if tipo == "local":
